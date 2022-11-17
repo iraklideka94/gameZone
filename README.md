@@ -34,13 +34,10 @@ important parts of the application is the built-in chat, with the help of which 
     <img src="https://user-images.githubusercontent.com/107555010/200191541-c55540d0-191c-4d0e-a4ef-c7e8f2780ef1.jpg" width="200">
     <img src="https://user-images.githubusercontent.com/107555010/200191544-62923425-d6a0-4c8d-8d82-f6d63675e5c1.jpg" width="200">
     
-- #### Profile
-    Here you can configure your profile, change username, password and profile image. If you will need some help you can contact us from here or sign out.</br></br>
-    <img src="https://user-images.githubusercontent.com/107555010/200191918-17e5704d-194b-4f80-9370-d276f9406bbb.jpg" width="200">
+
     
 - #### Home
-    Here you can check latest running matches for each game and see number of translations running right now.</br></br>
-    <img src="https://user-images.githubusercontent.com/107555010/200192242-696363d7-4cf9-4898-b202-0f6dbba1eb1d.jpg" width="200">
+    Here you can check latest running matches for each game and see number of translations running right now.</br></br
     <img src="https://user-images.githubusercontent.com/107555010/200192432-113df023-18d5-4e15-908f-371af5d1e1ed.jpg" width="200">
 
 - #### Match Details
