@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    tools:context=".ui.tabs.home.live_matches_list.match_details.MatchDetailsFragment">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_arrow_back"
+        app:backgroundTint="@color/app_white_transparent"
+        app:fabCustomSize="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/white" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivLive"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvLiveNow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@color/app_red"
+        android:fontFamily="@font/sk_modernist_regular"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="2dp"
+        android:text="@string/live_now"
+        android:visibility="gone"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="-30dp"
+        android:background="@drawable/shape_rounded_corners_top"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivLive">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivTeamFirst"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/shape_rounded_corners_outlined_light"
+            android:padding="18dp"
+            android:scaleType="centerInside"
+            app:layout_constraintEnd_toStartOf="@+id/tvScoreFirst"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/firstTeamProgressBar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:indeterminateDrawable="@drawable/progressbar_bg"
+            app:layout_constraintBottom_toBottomOf="@+id/ivTeamFirst"
+            app:layout_constraintEnd_toEndOf="@+id/ivTeamFirst"
+            app:layout_constraintStart_toStartOf="@+id/ivTeamFirst"
+            app:layout_constraintTop_toTopOf="@+id/ivTeamFirst" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvScoreFirst"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sk_modernist_bold"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            app:layout_constraintBottom_toBottomOf="@+id/ivTeamFirst"
+            app:layout_constraintEnd_toStartOf="@+id/appCompatImageView2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/ivTeamFirst"
+            app:layout_constraintTop_toTopOf="@+id/ivTeamFirst" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/appCompatImageView2"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/img_swords"
+            app:layout_constraintBottom_toBottomOf="@+id/tvScoreFirst"
+            app:layout_constraintEnd_toStartOf="@+id/tvScoreSecond"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tvScoreFirst"
+            app:layout_constraintTop_toTopOf="@+id/tvScoreFirst" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvScoreSecond"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sk_modernist_bold"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            app:layout_constraintBottom_toBottomOf="@+id/appCompatImageView2"
+            app:layout_constraintEnd_toStartOf="@+id/ivTeamSecond"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/appCompatImageView2"
+            app:layout_constraintTop_toTopOf="@+id/appCompatImageView2" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivTeamSecond"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/shape_rounded_corners_outlined_light"
+            android:padding="18dp"
+            android:scaleType="centerInside"
+            app:layout_constraintBottom_toBottomOf="@+id/tvScoreSecond"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tvScoreSecond"
+            app:layout_constraintTop_toTopOf="@+id/tvScoreSecond" />
+
+        <ProgressBar
+            android:id="@+id/secondTeamProgressBar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:indeterminateDrawable="@drawable/progressbar_bg"
+            app:layout_constraintBottom_toBottomOf="@+id/ivTeamSecond"
+            app:layout_constraintEnd_toEndOf="@+id/ivTeamSecond"
+            app:layout_constraintStart_toStartOf="@+id/ivTeamSecond"
+            app:layout_constraintTop_toTopOf="@+id/ivTeamSecond" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:fontFamily="@font/sk_modernist_bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivTeamFirst" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvStartTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/app_grey_light"
+            android:textSize="14sp"
+            app:fontFamily="@font/sk_modernist_regular"
+            app:layout_constraintEnd_toEndOf="@+id/tvTitle"
+            app:layout_constraintStart_toStartOf="@+id/tvTitle"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPlayers"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginVertical="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/btnWatch"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layoutAnimation="@anim/layout_items_scale_out"
+            app:layout_constraintTop_toBottomOf="@+id/tvStartTime"
+            tools:itemCount="5"
+            tools:listitem="@layout/item_players" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnWatch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:fontFamily="@font/sk_modernist_bold"
+            android:text="@string/watch"
+            android:textAllCaps="false"
+            android:textColor="@color/app_background"
+            android:textSize="16sp"
+            app:cornerRadius="14dp"
+            android:paddingVertical="16dp"
+            android:enabled="false"
+            app:layout_constraintBottom_toBottomOf="@+id/btnShare"
+            app:layout_constraintEnd_toStartOf="@+id/btnShare"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btnShare"
+            app:rippleColor="@color/app_background_light" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnShare"
+            style="@style/PrimaryFloatingButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/ic_share"
+            app:fabCustomSize="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateDrawable="@drawable/progressbar_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_end="0dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

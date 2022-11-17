@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    android:gravity="center|top"
+    android:orientation="vertical"
+    android:padding="24dp"
+    tools:context=".ui.auth.login.LoginFragment">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:fontFamily="@font/sk_modernist_bold"
+        android:text="@string/login_now"
+        android:textColor="@color/white"
+        android:textSize="24sp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/sk_modernist_regular"
+        android:gravity="center"
+        android:text="@string/login_welcome"
+        android:textColor="@color/app_grey" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/PrimaryTextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:hint="@string/email_address">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/sk_modernist_regular"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:paddingVertical="22dp"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/PrimaryTextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:hint="@string/password"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/app_grey">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/sk_modernist_regular"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:paddingVertical="22dp"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/btnForgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="30dp"
+        android:text="@string/forgot_password"
+        android:textColor="@color/app_yellow" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnLogin"
+        style="@style/PrimaryMaterialButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/login_now" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSignInWithGoogle"
+        style="@style/SecondaryMaterialButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/sign_in_with_google"
+        app:icon="@drawable/ic_google"
+        app:iconGravity="textStart"
+        app:iconTint="@null" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvCreateAccount"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom|center"
+        android:text="@string/don_t_have_account"
+        android:textColor="@color/app_grey"
+        android:textColorLink="@color/app_yellow"
+        android:textSize="16sp" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

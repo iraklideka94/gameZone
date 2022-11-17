@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    android:paddingHorizontal="24dp"
+    android:paddingTop="24dp"
+    tools:context=".ui.tabs.home.live_matches_list.LiveMatchesListFragment">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnBack"
+        style="@style/PrimaryFloatingButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:gravity="center"
+        android:text="@string/live_events"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:fontFamily="@font/sk_modernist_bold"
+        app:layout_constraintBottom_toBottomOf="@+id/btnBack"
+        app:layout_constraintEnd_toStartOf="@+id/btnSearch"
+        app:layout_constraintStart_toEndOf="@+id/btnBack"
+        app:layout_constraintTop_toTopOf="@+id/btnBack" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnSearch"
+        style="@style/PrimaryFloatingButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_search"
+        app:layout_constraintBottom_toBottomOf="@+id/btnBack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnBack" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etSearch"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/shape_rounded_corners"
+        android:backgroundTint="@color/app_background_light"
+        android:drawableStart="@drawable/ic_search"
+        android:drawablePadding="16dp"
+        android:elevation="10dp"
+        android:hint="@string/name"
+        android:paddingHorizontal="16dp"
+        android:textColorHint="@color/app_grey"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/btnSearch"
+        app:layout_constraintEnd_toStartOf="@+id/btnSearch"
+        app:layout_constraintStart_toStartOf="@+id/btnBack"
+        app:layout_constraintTop_toTopOf="@+id/btnSearch" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/livesRecycler"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layoutAnimation="@anim/layout_items_scale_out"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnBack"
+        tools:listitem="@layout/item_live" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateDrawable="@drawable/progressbar_bg"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/livesRecycler"
+        app:layout_constraintEnd_toEndOf="@+id/livesRecycler"
+        app:layout_constraintStart_toStartOf="@+id/livesRecycler"
+        app:layout_constraintTop_toTopOf="@+id/livesRecycler" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="0dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
